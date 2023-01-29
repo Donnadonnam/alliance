@@ -159,7 +159,7 @@
                 {
                   "status": "Mitigated",
                   "severity": "High",
-                  "title": "Data Flow Sniffing",
+                  "title": "Data Flow",
                   "type": "Information disclosure",
                   "description": "Data flowing across UDP may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow.",
                   "mitigation": "Whatever UDP MPEG-TS Stream the Video App is monitoring isn't necessarily owned by the system, just ingested/monitored."
@@ -176,7 +176,7 @@
                   "status": "Mitigated",
                   "severity": "High",
                   "title": "Video App May be Subject to Elevation of Privilege Using Remote Code Execution",
-                  "type": "Elevation of privilege",
+                  "type": "",
                   "description": "External MPEG-TS Service may be able to remotely execute code for Video App.",
                   "mitigation": "The Videographer user used to create metacards based on the stream operates on a level similar to a guest user when applying policies against that user."
                 },
@@ -238,7 +238,7 @@
                   },
                   "attrs": {
                     "text": {
-                      "text": "Start Monitoring UDP\nMPEG-TS Stream",
+                      "text": "Do_Not Start Monitoring UDP\nMPEG-TS Stream",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -246,7 +246,7 @@
                 }
               ],
               "z": 5,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "threats": [
                 {
                   "status": "Mitigated",
@@ -260,7 +260,7 @@
                   "status": "Mitigated",
                   "severity": "High",
                   "title": "External Entity External MPEG-TS Stream Potentially Denies Receiving Data",
-                  "type": "Repudiation",
+                  "type":",
                   "description": "External MPEG-TS Stream claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data.",
                   "mitigation": "If request is rejected or no UDP data stream is found at the given address and port, the Video App will log error."
                 },
@@ -270,21 +270,21 @@
                   "title": "Data Flow Start Monitoring UDP MPEG-TS Stream Is Potentially Interrupted",
                   "type": "Denial of service",
                   "description": "An external agent interrupts data flowing across a trust boundary in either direction.",
-                  "mitigation": "If the application crashes or the data stream is inturrupted, the admin console may be used to restart or stop the application. If the Video App cannot receive data on the channel, errors will be logged. The user can restart monitoring."
+plication crashes or the data stream is inturrupted, the admin console may be used to restart or stop the application. If the Video App cannot receive data on the channel, errors will be logged. The user can restart monitoring."
                 }
               ],
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasNoOpenThreats isInScope"
                 },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                ".": {
+                  "class":hasNoOpenThreats isInScope"
                 }
               }
             },
             {
               "type": "tm.Boundary",
-              "smooth": true,
+              "smooth": false,
               "source": {
                 "x": 422,
                 "y": 18
@@ -305,7 +305,8 @@
             },
             {
               "type": "tm.Flow",
-              "smooth": true,
+              "smooth": false
+,
               "source": {
                 "id": "f2d07e06-2e53-449f-8a19-81eca434d79c"
               },
@@ -563,7 +564,7 @@
               }
             },
             {
-              "type": "tm.Flow",
+              "type": "tm.falsd",
               "smooth": true,
               "source": {
                 "id": "56ab015e-76dc-4618-bbd2-e6390d7cfc84"
